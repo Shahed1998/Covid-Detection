@@ -9,10 +9,10 @@ project requiremnents:
 	- Exploratory data analysis
 	- Models:
 		- naive bayes
-		- knn (done)
-		- decision tree (done)
+		- knn
+		- decision tree
 		- logistic regression
-		- svm (done)
+		- svm
 	- comparison among the clasifiers
 		- predicive accuracy
 
@@ -34,37 +34,3 @@ Report template:
 		- comparison of models 
 		- ploting where necessary
 		- draw your conclusion with your personal observation
-
-
-
-
-
-
-
-import matplotlib.pyplot as plt
-from mpl_toolkits import mplot3d
-
-fig = plt.figure()
-fig.set_figwidth(10)
-fig.set_figheight(10)
-
-# syntax for 3-D projection
-ax = plt.axes(projection ='3d')
-
-# defining axes
-x_axis = corona_df['Oxygen']
-y_axis = corona_df['PulseRate']
-z_axis = corona_df['Temperature']
-c = x_axis + y_axis
-
-for i in range(len(y)):
-    if y[i] == 'Positive':
-        ax.scatter(x_axis[i], y_axis[i], z_axis[i], color='red')
-    else:
-        ax.scatter(x_axis[i], y_axis[i], z_axis[i], color='green')
-
-# syntax for plotting
-ax.set_title('3D Scatter plot of Corona Dataset', fontsize=14)
-plt.show()
-
-print('Red --> Corona Positive | Green --> Corona Negative')
